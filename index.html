@@ -3,17 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Farah | Portfolio</title>
-  <meta name="description" content="Elegant personal portfolio website" />
+  <title>Farah Alnaqib | Portfolio</title>
+  <meta
+    name="description"
+    content="Farah Alnaqib portfolio website - Computer Science student at Effat University with interests in AI and Cybersecurity."
+  />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
 
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-
   <div class="bg-blur bg-blur-1"></div>
   <div class="bg-blur bg-blur-2"></div>
   <div class="bg-grid"></div>
@@ -22,11 +27,15 @@
     <div class="container nav-content">
       <a href="#home" class="logo">Farah</a>
 
-      <nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+
+      <nav class="nav-menu" id="navMenu">
         <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#courses">Courses</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -37,16 +46,17 @@
 
   <main>
     <section id="home" class="hero section">
-      <div class="container hero-grid">
-        <div class="hero-text reveal">
+      <div class="container hero-grid hero-grid-clean">
+        <div class="hero-text">
           <span class="eyebrow">Creative Portfolio</span>
           <h1>
-            Hi, I’m <span class="gradient-text">Farah</span><br>
+            Hi, I’m <span class="gradient-text">Farah</span><br />
             I build elegant digital experiences.
           </h1>
           <p class="hero-desc">
-            A creative Computer Science student passionate about modern interfaces,
-            visual storytelling, and building projects that feel clean, stylish, and memorable.
+            Computer Science student at Effat University with strong interests in
+            Artificial Intelligence and Cybersecurity, building practical systems
+            and preparing for professional opportunities.
           </p>
 
           <div class="hero-buttons">
@@ -55,18 +65,18 @@
           </div>
 
           <div class="hero-mini-cards">
-            <div class="mini-card">
-              <strong>Creative</strong>
-              <span>Design-focused interfaces</span>
+            <div class="mini-card reveal stagger-1">
+              <strong>AI Interest</strong>
+              <span>Smart and data-driven solutions</span>
             </div>
-            <div class="mini-card">
-              <strong>Modern</strong>
-              <span>Clean and elegant UI</span>
+            <div class="mini-card reveal stagger-2">
+              <strong>Cyber Focus</strong>
+              <span>Secure and reliable systems</span>
             </div>
           </div>
         </div>
 
-        <div class="hero-visual reveal">
+        <div class="hero-visual">
           <div class="avatar-shell">
             <svg class="avatar-svg" viewBox="0 10 211.73 180" stroke-linecap="round" stroke-linejoin="round">
               <defs>
@@ -138,65 +148,140 @@
               </g>
             </svg>
 
-            <div class="floating-badge badge-1">UI / UX</div>
-            <div class="floating-badge badge-2">Creative</div>
+            <div class="floating-badge badge-1">AI / Cyber</div>
+            <div class="floating-badge badge-2">CS Student</div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="about" class="section">
+    <section id="about" class="section section-soft">
       <div class="container">
         <div class="section-heading reveal">
-          <span class="section-kicker">About</span>
-          <h2>Designed with personality, built with intention.</h2>
+          <span class="section-kicker">About Me</span>
+          <h2>Building practical systems with clarity and purpose.</h2>
         </div>
 
-        <div class="about-grid">
-          <div class="glass-card reveal">
-            <h3>Who I Am</h3>
+        <div class="about-layout">
+          <div class="about-main glass-card reveal stagger-1">
+            <h3>Farah Alnaqib</h3>
             <p>
-              I’m a passionate creator who loves combining clean visuals,
-              thoughtful interaction, and modern styling into digital experiences
-              that feel polished and expressive.
+              Hi, I’m Farah Alnaqib, a Computer Science student at Effat University
+              with a strong interest in Artificial Intelligence and Cybersecurity.
+            </p>
+            <p>
+              I am currently following a general track that allows me to explore
+              both areas while building a solid foundation in software development,
+              problem-solving, and system design. Through my academic journey, I
+              have worked on multiple projects ranging from full-stack web
+              applications to system-based solutions, gaining hands-on experience
+              in databases, algorithms, and application development.
+            </p>
+            <p>
+              As I approach graduation, I am focused on strengthening my technical
+              skills and building impactful solutions that reflect both creativity
+              and technical depth.
             </p>
           </div>
 
-          <div class="glass-card reveal">
-            <h3>What I Love</h3>
-            <p>
-              I enjoy elegant interfaces, soft color palettes, creative layout systems,
-              and little details that make a website feel alive and memorable.
-            </p>
-          </div>
+          <div class="about-side">
+            <div class="glass-card reveal stagger-2">
+              <h4>Focus Areas</h4>
+              <div class="tag-list">
+                <span class="tag">Artificial Intelligence</span>
+                <span class="tag">Cybersecurity</span>
+                <span class="tag">Software Development</span>
+                <span class="tag">Problem Solving</span>
+              </div>
+            </div>
 
-          <div class="glass-card reveal">
-            <h3>My Focus</h3>
-            <p>
-              Front-end design, visual identity, responsive layout, and building
-              websites that are both beautiful and clear.
-            </p>
+            <div class="glass-card reveal stagger-3">
+              <h4>Current Goal</h4>
+              <p>
+                Preparing for graduation while building a portfolio that supports
+                internship and early-career opportunities in technical fields.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="skills" class="section section-soft">
+    <section id="education" class="section">
       <div class="container">
         <div class="section-heading reveal">
-          <span class="section-kicker">Skills</span>
-          <h2>Things I use to create beautiful work.</h2>
+          <span class="section-kicker">Education</span>
+          <h2>Academic foundation and growth.</h2>
         </div>
 
-        <div class="skills-wrap reveal">
-          <span class="skill-pill">HTML</span>
-          <span class="skill-pill">CSS</span>
-          <span class="skill-pill">JavaScript</span>
-          <span class="skill-pill">Responsive Design</span>
-          <span class="skill-pill">UI Design</span>
-          <span class="skill-pill">Visual Storytelling</span>
-          <span class="skill-pill">Creative Layouts</span>
-          <span class="skill-pill">GitHub</span>
+        <div class="education-grid">
+          <div class="glass-card reveal stagger-1">
+            <h3>Bachelor of Science in Computer Science</h3>
+            <p class="edu-place">Effat University</p>
+            <p class="edu-meta">2022 – Present</p>
+            <ul class="clean-list">
+              <li>Completed foundation year (English Program) in 2022</li>
+              <li>Started Computer Science major in 2023</li>
+              <li>Currently entering final (senior) year</li>
+            </ul>
+          </div>
+
+          <div class="glass-card reveal stagger-2">
+            <h3>Academic Standing</h3>
+            <p class="edu-place">Good Standing</p>
+            <p class="edu-meta">Current GPA: 3.80</p>
+            <ul class="clean-list">
+              <li>Strong academic performance across core CS courses</li>
+              <li>Focused on AI, Cybersecurity, and software systems</li>
+              <li>Developing both technical and analytical skills</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="courses" class="section section-soft">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="section-kicker">Courses</span>
+          <h2>Relevant coursework in Computer Science, AI, and Cybersecurity.</h2>
+        </div>
+
+        <div class="courses-groups">
+          <div class="glass-card reveal stagger-1">
+            <h3>Artificial Intelligence & Data</h3>
+            <div class="pill-grid">
+              <span class="course-pill">Artificial Intelligence</span>
+              <span class="course-pill">Linear Algebra</span>
+              <span class="course-pill">Statistics for Computing</span>
+              <span class="course-pill">Algorithm Analysis</span>
+              <span class="course-pill">Research & Innovation</span>
+            </div>
+          </div>
+
+          <div class="glass-card reveal stagger-2">
+            <h3>Cybersecurity & Systems</h3>
+            <div class="pill-grid">
+              <span class="course-pill">Information & Cybersecurity</span>
+              <span class="course-pill">Computer Networks</span>
+              <span class="course-pill">Operating Systems</span>
+              <span class="course-pill">Computer Architecture & Organization</span>
+            </div>
+          </div>
+
+          <div class="glass-card reveal stagger-3">
+            <h3>Core Computer Science</h3>
+            <div class="pill-grid">
+              <span class="course-pill">Data Structures & Algorithms</span>
+              <span class="course-pill">Software Engineering</span>
+              <span class="course-pill">Database Systems</span>
+              <span class="course-pill">Object-Oriented Programming</span>
+              <span class="course-pill">Advanced Programming</span>
+              <span class="course-pill">Web Application Development</span>
+              <span class="course-pill">Introduction to Computing</span>
+              <span class="course-pill">Principles of Computing</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -205,68 +290,178 @@
       <div class="container">
         <div class="section-heading reveal">
           <span class="section-kicker">Projects</span>
-          <h2>A polished showcase of selected work.</h2>
+          <h2>Selected academic and technical projects.</h2>
         </div>
 
-        <div class="projects-showcase">
-          <div class="project-list reveal">
-            <button class="project-trigger active" data-project="0">Luna UI</button>
-            <button class="project-trigger" data-project="1">Soft Motion</button>
-            <button class="project-trigger" data-project="2">Bloom Space</button>
-            <button class="project-trigger" data-project="3">Glow Studio</button>
+        <div class="projects-grid">
+          <article class="project-panel glass-card reveal stagger-1">
+            <div class="project-icon">🩸</div>
+            <h3>Fidak – Blood Donation Management System</h3>
+            <p>
+              A full-stack web-based blood donation management system designed to
+              connect donors, hospitals, and healthcare organizations across Saudi Arabia.
+            </p>
+            <ul class="clean-list">
+              <li>Donor registration and profile management</li>
+              <li>Blood request system and real-time donor search</li>
+              <li>Admin dashboard with CRUD operations</li>
+              <li>Arabic and English support</li>
+            </ul>
+          </article>
+
+          <article class="project-panel glass-card reveal stagger-2">
+            <div class="project-icon">🚗</div>
+            <h3>Smart Parking System</h3>
+            <p>
+              A smart parking platform focused on reservations, real-time availability,
+              QR-based access, and automated violation management.
+            </p>
+            <ul class="clean-list">
+              <li>Reservation workflow and parking availability</li>
+              <li>Violation management and admin configuration</li>
+              <li>System design, diagrams, and requirement modeling</li>
+            </ul>
+          </article>
+
+          <article class="project-panel glass-card reveal stagger-3">
+            <div class="project-icon">🎬</div>
+            <h3>Movie Theater Management System</h3>
+            <p>
+              Desktop-based system for managing movies, screenings, events, staff,
+              and reviews using Python and MySQL.
+            </p>
+            <ul class="clean-list">
+              <li>GUI with Tkinter</li>
+              <li>Relational database design and CRUD</li>
+              <li>Scheduling, reviews, and analytics support</li>
+            </ul>
+          </article>
+
+          <article class="project-panel glass-card reveal stagger-4">
+            <div class="project-icon">🧩</div>
+            <h3>Maze Solver Game</h3>
+            <p>
+              A C++ maze-solving application applying data structures such as stack
+              and queue to implement pathfinding logic.
+            </p>
+            <ul class="clean-list">
+              <li>Algorithmic thinking and traversal logic</li>
+              <li>Pathfinding with Stack and Queue concepts</li>
+            </ul>
+            <a
+              class="project-link"
+              href="https://github.com/LamaAT1/Maze-Solver.git"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View on GitHub
+            </a>
+          </article>
+
+          <article class="project-panel glass-card reveal stagger-5">
+            <div class="project-icon">🏦</div>
+            <h3>Bank / ATM Management System</h3>
+            <p>
+              Console-based banking system simulating real ATM operations such as
+              deposits, withdrawals, and balance inquiries.
+            </p>
+            <ul class="clean-list">
+              <li>Transaction handling and account management</li>
+              <li>Structured logic and interactive flow</li>
+            </ul>
+          </article>
+
+          <article class="project-panel glass-card reveal stagger-6">
+            <div class="project-icon">🎮</div>
+            <h3>Tic-Tac-Toe with User System</h3>
+            <p>
+              Interactive C++ game featuring user login, multiple board sizes,
+              and player statistics tracking.
+            </p>
+            <ul class="clean-list">
+              <li>Authentication and gameplay integration</li>
+              <li>Statistics and game mode management</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section section-soft">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="section-kicker">Skills</span>
+          <h2>Technical skills built through coursework and projects.</h2>
+        </div>
+
+        <div class="skills-cards">
+          <div class="glass-card reveal stagger-1">
+            <h3>Programming</h3>
+            <div class="pill-grid">
+              <span class="skill-pill">C++</span>
+              <span class="skill-pill">Python</span>
+              <span class="skill-pill">JavaScript</span>
+              <span class="skill-pill">PHP</span>
+            </div>
           </div>
 
-          <div class="project-preview reveal">
-            <div class="project-card active" data-card="0">
-              <div class="project-visual gradient-one"></div>
-              <div class="project-info">
-                <span class="project-number">01</span>
-                <h3>Luna UI</h3>
-                <p>Elegant interface exploration built around clean layouts, soft shadows, and visual calm.</p>
-              </div>
+          <div class="glass-card reveal stagger-2">
+            <h3>Web Development</h3>
+            <div class="pill-grid">
+              <span class="skill-pill">HTML</span>
+              <span class="skill-pill">CSS</span>
+              <span class="skill-pill">Bootstrap</span>
+              <span class="skill-pill">jQuery</span>
             </div>
+          </div>
 
-            <div class="project-card" data-card="1">
-              <div class="project-visual gradient-two"></div>
-              <div class="project-info">
-                <span class="project-number">02</span>
-                <h3>Soft Motion</h3>
-                <p>A concept website focused on motion, depth, and interaction that feels subtle and premium.</p>
-              </div>
+          <div class="glass-card reveal stagger-3">
+            <h3>Database & Tools</h3>
+            <div class="pill-grid">
+              <span class="skill-pill">MySQL</span>
+              <span class="skill-pill">SQL</span>
+              <span class="skill-pill">Git</span>
+              <span class="skill-pill">GitHub</span>
+              <span class="skill-pill">VS Code</span>
             </div>
+          </div>
 
-            <div class="project-card" data-card="2">
-              <div class="project-visual gradient-three"></div>
-              <div class="project-info">
-                <span class="project-number">03</span>
-                <h3>Bloom Space</h3>
-                <p>A bright visual system with cards, sections, and refined spacing for a polished modern experience.</p>
-              </div>
-            </div>
-
-            <div class="project-card" data-card="3">
-              <div class="project-visual gradient-four"></div>
-              <div class="project-info">
-                <span class="project-number">04</span>
-                <h3>Glow Studio</h3>
-                <p>A creative portfolio direction that mixes softness, movement, and expressive typography.</p>
-              </div>
+          <div class="glass-card reveal stagger-4">
+            <h3>Core Strengths</h3>
+            <div class="pill-grid">
+              <span class="skill-pill">Problem Solving</span>
+              <span class="skill-pill">System Design</span>
+              <span class="skill-pill">Data Structures</span>
+              <span class="skill-pill">Algorithms</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="section section-soft">
+    <section id="contact" class="section">
       <div class="container">
         <div class="contact-box glass-card reveal">
           <span class="section-kicker">Contact</span>
-          <h2>Let’s create something beautiful together.</h2>
+          <h2>Let’s connect.</h2>
           <p>
-            This is a placeholder section for your email, social links, and anything
-            you want people to use to reach you.
+            I’m building my portfolio as I prepare for graduation and future
+            professional opportunities in Computer Science, AI, and Cybersecurity.
           </p>
-          <a href="#" class="btn btn-primary">Get In Touch</a>
+
+          <div class="contact-links">
+            <a href="mailto:fabalnaqib@effat.edu.sa">fabalnaqib@effat.edu.sa</a>
+            <a href="https://github.com/FarahAlnaqib" target="_blank" rel="noopener noreferrer">
+              GitHub
+            </a>
+            <a
+              href="https://linkedin.com/in/farah-alnaqib-691157326"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </a>
+          </div>
         </div>
       </div>
     </section>

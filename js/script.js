@@ -1,66 +1,67 @@
 const body = document.body;
 const themeToggle = document.getElementById("themeToggle");
 const revealItems = document.querySelectorAll(".reveal");
-const projectTriggers = document.querySelectorAll(".project-trigger");
-const projectCards = document.querySelectorAll(".project-card");
 const scrollTopBtn = document.getElementById("scrollTopBtn");
+const navbar = document.querySelector(".navbar");
+const menuToggle = document.getElementById("menuToggle");
+const navMenu = document.getElementById("navMenu");
 
 // theme
-themeToggle.addEventListener("click", () => {
-  body.classList.toggle("dark");
-  themeToggle.textContent = body.classList.contains("dark") ? "🌙" : "☀️";
-});
-
-// reveal on scroll
-function revealOnScroll() {
-  revealItems.forEach((item) => {
-    const top = item.getBoundingClientRect().top;
-    const visible = window.innerHeight - 80;
-    if (top < visible) {
-      item.classList.add("active");
-    }
+if (themeToggle) {
+  themeToggle.addEventListener("click", () => {
+    body.classList.toggle("dark");
+    themeToggle.textContent = body.classList.contains("dark") ? "🌙" : "☀️";
   });
 }
-window.addEventListener("scroll", revealOnScroll);
-window.addEventListener("load", revealOnScroll);
 
-// projects switch
-projectTriggers.forEach((btn) => {
-  btn.addEventListener("mouseenter", () => {
-    const index = btn.dataset.project;
-
-    projectTriggers.forEach((b) => b.classList.remove("active"));
-    projectCards.forEach((card) => card.classList.remove("active"));
-
-    btn.classList.add("active");
-    document.querySelector(`.project-card[data-card="${index}"]`).classList.add("active");
+// mobile menu
+if (menuToggle && navMenu) {
+  menuToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("show");
   });
 
-  btn.addEventListener("click", () => {
-    const index = btn.dataset.project;
-
-    projectTriggers.forEach((b) => b.classList.remove("active"));
-    projectCards.forEach((card) => card.classList.remove("active"));
-
-    btn.classList.add("active");
-    document.querySelector(`.project-card[data-card="${index}"]`).classList.add("active");
+  document.querySelectorAll(".nav-links a").forEach((link) => {
+    link.addEventListener("click", () => navMenu.classList.remove("show"));
   });
-});
+}
 
-// scroll top button
+// reveal with IntersectionObserver
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+      }
+    });
+  },
+  {
+    threshold: 0.12,
+    rootMargin: "0px 0px -40px 0px",
+  }
+);
+
+revealItems.forEach((item) => observer.observe(item));
+
+// navbar + scroll top
 window.addEventListener("scroll", () => {
-  if (window.scrollY > 300) {
-    scrollTopBtn.classList.add("show");
+  if (window.scrollY > 30) {
+    navbar?.classList.add("scrolled");
   } else {
-    scrollTopBtn.classList.remove("show");
+    navbar?.classList.remove("scrolled");
+  }
+
+  if (window.scrollY > 300) {
+    scrollTopBtn?.classList.add("show");
+  } else {
+    scrollTopBtn?.classList.remove("show");
   }
 });
 
-scrollTopBtn.addEventListener("click", () => {
+scrollTopBtn?.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-// avatar face follow mouse
+// avatar follow mouse
 const face = document.querySelector(".face");
 const innerFace = document.querySelector(".inner-face");
 const eyes = document.querySelectorAll(".eye");
@@ -72,6 +73,8 @@ const shadows = document.querySelectorAll(".shape-shadow");
 
 let mouseX = window.innerWidth / 2;
 let mouseY = window.innerHeight / 2;
+let currentX = mouseX;
+let currentY = mouseY;
 
 window.addEventListener("mousemove", (e) => {
   mouseX = e.clientX;
@@ -79,36 +82,37 @@ window.addEventListener("mousemove", (e) => {
 });
 
 function animateAvatar() {
-  const x = (mouseX / window.innerWidth - 0.5) * 2;
-  const y = (mouseY / window.innerHeight - 0.5) * 2;
+  currentX += (mouseX - currentX) * 0.08;
+  currentY += (mouseY - currentY) * 0.08;
 
-  if (face) {
-    face.style.transform = `translate(${x * 6}px, ${y * 5}px)`;
-  }
-  if (innerFace) {
-    innerFace.style.transform = `translate(${x * 4}px, ${y * 4}px)`;
-  }
+  const x = (currentX / window.innerWidth - 0.5) * 2;
+  const y = (currentY / window.innerHeight - 0.5) * 2;
+
+  if (face) face.style.transform = `translate(${x * 6}px, ${y * 5}px)`;
+  if (innerFace) innerFace.style.transform = `translate(${x * 4}px, ${y * 4}px)`;
+
   eyes.forEach((eye) => {
-    eye.style.transform = `translate(${x * 5}px, ${y * 5}px)`;
+    eye.style.transform = `translate(${x * 4}px, ${y * 4}px)`;
   });
+
   brows.forEach((brow) => {
-    brow.style.transform = `translate(${x * 2}px, ${y * 3}px)`;
+    brow.style.transform = `translate(${x * 2}px, ${y * 2}px)`;
   });
-  if (hairFront) {
-    hairFront.style.transform = `translate(${x * 2.5}px, ${y * 2}px)`;
-  }
-  if (hairBack) {
-    hairBack.style.transform = `translate(${x * -1.5}px, ${y * -1.5}px)`;
-  }
+
+  if (hairFront) hairFront.style.transform = `translate(${x * 2}px, ${y * 1.6}px)`;
+  if (hairBack) hairBack.style.transform = `translate(${x * -1.4}px, ${y * -1.2}px)`;
+
   ears.forEach((ear) => {
-    ear.style.transform = `translate(${x * -2}px, ${y * -1}px)`;
+    ear.style.transform = `translate(${x * -1.5}px, ${y * -0.8}px)`;
   });
+
   shadows.forEach((shadow) => {
-    shadow.style.transform = `translate(${x * -1.2}px, ${y * -1.2}px)`;
+    shadow.style.transform = `translate(${x * -1}px, ${y * -1}px)`;
   });
 
   requestAnimationFrame(animateAvatar);
 }
+
 animateAvatar();
 
 // blinking
@@ -130,10 +134,10 @@ function blinkEyes() {
     eyeRight.style.opacity = "1";
     eyeLeftBlink.style.opacity = "0";
     eyeRightBlink.style.opacity = "0";
-  }, 180);
+  }, 170);
 
-  const nextBlink = Math.random() * 3000 + 2500;
+  const nextBlink = Math.random() * 2600 + 2200;
   setTimeout(blinkEyes, nextBlink);
 }
 
-setTimeout(blinkEyes, 1800);
+setTimeout(blinkEyes, 1500);
