@@ -21,11 +21,13 @@ if (menuToggle && navMenu) {
   });
 
   document.querySelectorAll(".nav-links a").forEach((link) => {
-    link.addEventListener("click", () => navMenu.classList.remove("show"));
+    link.addEventListener("click", () => {
+      navMenu.classList.remove("show");
+    });
   });
 }
 
-// reveal with IntersectionObserver
+// reveal on scroll
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {

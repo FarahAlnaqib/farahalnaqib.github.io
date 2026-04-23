@@ -27,56 +27,63 @@
     <div class="container nav-content">
       <a href="#home" class="logo">Farah</a>
 
-      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
-
       <nav class="nav-menu" id="navMenu">
         <ul class="nav-links">
           <li><a href="#about">About Me</a></li>
           <li><a href="#education">Education</a></li>
           <li><a href="#courses">Courses</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#certifications">Certifications</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
 
-      <button id="themeToggle" class="theme-btn" aria-label="Toggle theme">☀️</button>
+      <div class="nav-actions">
+        <button id="themeToggle" class="theme-btn" aria-label="Toggle theme">☀️</button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+      </div>
     </div>
   </header>
 
   <main>
     <section id="home" class="hero section">
-      <div class="container hero-grid hero-grid-clean">
+      <div class="container hero-grid">
         <div class="hero-text">
-          <span class="eyebrow">Creative Portfolio</span>
-          <h1>
-            Hi, I’m <span class="gradient-text">Farah</span><br />
-            I build elegant digital experiences.
+          <span class="eyebrow reveal active-on-load">Farah Alnaqib</span>
+
+          <h1 class="reveal active-on-load delay-1">
+            Building practical systems in
+            <span class="gradient-text">Artificial Intelligence</span>,
+            Cybersecurity, and software development.
           </h1>
-          <p class="hero-desc">
+
+          <p class="hero-desc reveal active-on-load delay-2">
             Computer Science student at Effat University with strong interests in
-            Artificial Intelligence and Cybersecurity, building practical systems
-            and preparing for professional opportunities.
+            Artificial Intelligence and Cybersecurity. Passionate about building
+            practical systems and developing technical skills through academic and
+            hands-on projects.
           </p>
 
-          <div class="hero-buttons">
+          <div class="hero-buttons reveal active-on-load delay-3">
             <a href="#projects" class="btn btn-primary">See My Work</a>
             <a href="#contact" class="btn btn-secondary">Let’s Talk</a>
           </div>
 
           <div class="hero-mini-cards">
-            <div class="mini-card reveal stagger-1">
+            <div class="mini-card reveal active-on-load delay-4">
               <strong>AI Interest</strong>
               <span>Smart and data-driven solutions</span>
             </div>
-            <div class="mini-card reveal stagger-2">
+
+            <div class="mini-card reveal active-on-load delay-5">
               <strong>Cyber Focus</strong>
               <span>Secure and reliable systems</span>
             </div>
           </div>
         </div>
 
-        <div class="hero-visual">
+        <div class="hero-visual reveal active-on-load delay-2">
           <div class="avatar-shell">
             <svg class="avatar-svg" viewBox="0 10 211.73 180" stroke-linecap="round" stroke-linejoin="round">
               <defs>
@@ -170,12 +177,12 @@
               with a strong interest in Artificial Intelligence and Cybersecurity.
             </p>
             <p>
-              I am currently following a general track that allows me to explore
-              both areas while building a solid foundation in software development,
-              problem-solving, and system design. Through my academic journey, I
-              have worked on multiple projects ranging from full-stack web
-              applications to system-based solutions, gaining hands-on experience
-              in databases, algorithms, and application development.
+              I am following a general track that allows me to explore both fields
+              while building a solid foundation in software development,
+              problem-solving, and system design. Throughout my academic journey,
+              I have worked on projects ranging from web applications to
+              system-based solutions, gaining hands-on experience in programming,
+              databases, and algorithms.
             </p>
             <p>
               As I approach graduation, I am focused on strengthening my technical
@@ -196,10 +203,11 @@
             </div>
 
             <div class="glass-card reveal stagger-3">
-              <h4>Current Goal</h4>
+              <h4>Professional Focus</h4>
               <p>
-                Preparing for graduation while building a portfolio that supports
-                internship and early-career opportunities in technical fields.
+                Focused on building a strong foundation in Computer Science while
+                exploring Artificial Intelligence, Cybersecurity, and practical
+                software solutions through academic and hands-on projects.
               </p>
             </div>
           </div>
@@ -231,9 +239,9 @@
             <p class="edu-place">Good Standing</p>
             <p class="edu-meta">Current GPA: 3.80</p>
             <ul class="clean-list">
-              <li>Strong academic performance across core CS courses</li>
+              <li>Strong academic progress across core CS courses</li>
               <li>Focused on AI, Cybersecurity, and software systems</li>
-              <li>Developing both technical and analytical skills</li>
+              <li>Building practical knowledge through projects and coursework</li>
             </ul>
           </div>
         </div>
@@ -299,7 +307,7 @@
             <h3>Fidak – Blood Donation Management System</h3>
             <p>
               A full-stack web-based blood donation management system designed to
-              connect donors, hospitals, and healthcare organizations across Saudi Arabia.
+              connect donors, hospitals, and healthcare organizations.
             </p>
             <ul class="clean-list">
               <li>Donor registration and profile management</li>
@@ -313,8 +321,8 @@
             <div class="project-icon">🚗</div>
             <h3>Smart Parking System</h3>
             <p>
-              A smart parking platform focused on reservations, real-time availability,
-              QR-based access, and automated violation management.
+              A smart parking platform focused on reservations, real-time
+              availability, QR-based access, and automated violation management.
             </p>
             <ul class="clean-list">
               <li>Reservation workflow and parking availability</li>
@@ -341,12 +349,12 @@
             <div class="project-icon">🧩</div>
             <h3>Maze Solver Game</h3>
             <p>
-              A C++ maze-solving application applying data structures such as stack
-              and queue to implement pathfinding logic.
+              A C++ maze-solving application applying stack and queue concepts to
+              implement pathfinding logic.
             </p>
             <ul class="clean-list">
               <li>Algorithmic thinking and traversal logic</li>
-              <li>Pathfinding with Stack and Queue concepts</li>
+              <li>Pathfinding with core data structures</li>
             </ul>
             <a
               class="project-link"
@@ -367,7 +375,7 @@
             </p>
             <ul class="clean-list">
               <li>Transaction handling and account management</li>
-              <li>Structured logic and interactive flow</li>
+              <li>Structured logic and interactive user flow</li>
             </ul>
           </article>
 
@@ -387,7 +395,48 @@
       </div>
     </section>
 
-    <section id="skills" class="section section-soft">
+    <section id="certifications" class="section section-soft">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="section-kicker">Certifications</span>
+          <h2>Selected certificates supporting my technical growth.</h2>
+        </div>
+
+        <div class="certifications-grid">
+          <article class="glass-card cert-card reveal stagger-1">
+            <h3>Coursera Certificate</h3>
+            <p class="cert-source">Coursera</p>
+            <p>
+              Add your certificate title here once you send me the final list of
+              your selected Coursera certificates.
+            </p>
+            <a href="#" class="project-link">View Certificate</a>
+          </article>
+
+          <article class="glass-card cert-card reveal stagger-2">
+            <h3>Coursera Certificate</h3>
+            <p class="cert-source">Coursera</p>
+            <p>
+              This section is ready for your top certificates in AI,
+              Cybersecurity, Python, or other relevant technical areas.
+            </p>
+            <a href="#" class="project-link">View Certificate</a>
+          </article>
+
+          <article class="glass-card cert-card reveal stagger-3">
+            <h3>Coursera Certificate</h3>
+            <p class="cert-source">Coursera</p>
+            <p>
+              Replace this placeholder with the certificate name and direct link
+              after you choose your strongest certificates.
+            </p>
+            <a href="#" class="project-link">View Certificate</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
       <div class="container">
         <div class="section-heading reveal">
           <span class="section-kicker">Skills</span>
@@ -439,14 +488,15 @@
       </div>
     </section>
 
-    <section id="contact" class="section">
+    <section id="contact" class="section section-soft">
       <div class="container">
         <div class="contact-box glass-card reveal">
           <span class="section-kicker">Contact</span>
           <h2>Let’s connect.</h2>
           <p>
-            I’m building my portfolio as I prepare for graduation and future
-            professional opportunities in Computer Science, AI, and Cybersecurity.
+            I’d be happy to connect regarding projects, internships, or future
+            opportunities in Computer Science, Artificial Intelligence, and
+            Cybersecurity.
           </p>
 
           <div class="contact-links">
