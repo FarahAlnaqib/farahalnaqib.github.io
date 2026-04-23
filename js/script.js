@@ -6,7 +6,6 @@ const navbar = document.querySelector(".navbar");
 const menuToggle = document.getElementById("menuToggle");
 const navMenu = document.getElementById("navMenu");
 
-// theme
 if (themeToggle) {
   themeToggle.addEventListener("click", () => {
     body.classList.toggle("dark");
@@ -14,7 +13,6 @@ if (themeToggle) {
   });
 }
 
-// mobile menu
 if (menuToggle && navMenu) {
   menuToggle.addEventListener("click", () => {
     navMenu.classList.toggle("show");
@@ -27,7 +25,6 @@ if (menuToggle && navMenu) {
   });
 }
 
-// reveal on scroll
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
@@ -44,7 +41,6 @@ const observer = new IntersectionObserver(
 
 revealItems.forEach((item) => observer.observe(item));
 
-// navbar + scroll top
 window.addEventListener("scroll", () => {
   if (window.scrollY > 30) {
     navbar?.classList.add("scrolled");
@@ -63,7 +59,6 @@ scrollTopBtn?.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-// avatar follow mouse
 const face = document.querySelector(".face");
 const innerFace = document.querySelector(".inner-face");
 const eyes = document.querySelectorAll(".eye");
@@ -117,7 +112,6 @@ function animateAvatar() {
 
 animateAvatar();
 
-// blinking
 const eyeLeft = document.querySelector(".eye-left");
 const eyeRight = document.querySelector(".eye-right");
 const eyeLeftBlink = document.querySelector(".eye-left-2");
