@@ -5,6 +5,8 @@ const scrollTopBtn = document.getElementById("scrollTopBtn");
 const navbar = document.querySelector(".navbar");
 const menuToggle = document.getElementById("menuToggle");
 const navMenu = document.getElementById("navMenu");
+const navLinks = document.querySelectorAll(".nav-links a");
+const sections = document.querySelectorAll("section[id]");
 
 if (themeToggle) {
   themeToggle.addEventListener("click", () => {
@@ -18,7 +20,7 @@ if (menuToggle && navMenu) {
     navMenu.classList.toggle("show");
   });
 
-  document.querySelectorAll(".nav-links a").forEach((link) => {
+  navLinks.forEach((link) => {
     link.addEventListener("click", () => {
       navMenu.classList.remove("show");
     });
@@ -53,6 +55,25 @@ window.addEventListener("scroll", () => {
   } else {
     scrollTopBtn?.classList.remove("show");
   }
+
+  let currentSection = "";
+
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop - 140;
+    const sectionHeight = section.offsetHeight;
+
+    if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+      currentSection = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach((link) => {
+    link.classList.remove("active");
+
+    if (link.getAttribute("href") === `#${currentSection}`) {
+      link.classList.add("active");
+    }
+  });
 });
 
 scrollTopBtn?.addEventListener("click", () => {

@@ -203,7 +203,8 @@ body.dark .navbar.scrolled {
   position: relative;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a.active {
   color: var(--primary);
 }
 
@@ -219,7 +220,8 @@ body.dark .navbar.scrolled {
   transition: width 0.25s ease;
 }
 
-.nav-links a:hover::after {
+.nav-links a:hover::after,
+.nav-links a.active::after {
   width: 100%;
 }
 
@@ -240,6 +242,11 @@ body.dark .navbar.scrolled {
   box-shadow: var(--shadow-soft);
   cursor: pointer;
   font-size: 1.2rem;
+  transition: 0.25s ease;
+}
+
+.theme-btn:hover {
+  transform: rotate(10deg) scale(1.05);
 }
 
 .menu-toggle {
@@ -362,7 +369,11 @@ body.dark .navbar.scrolled {
 }
 
 .btn:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px) scale(1.02);
+}
+
+.btn:active {
+  transform: translateY(0) scale(0.97);
 }
 
 .btn-primary {
@@ -509,8 +520,9 @@ body.dark .mini-card {
 }
 
 .glass-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(140, 103, 193, 0.14);
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 25px 55px rgba(140, 103, 193, 0.16);
+  border-color: rgba(159, 122, 234, 0.28);
 }
 
 .about-layout {
@@ -621,7 +633,29 @@ body.dark .course-pill {
 }
 
 .certifications-grid {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.project-panel,
+.cert-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-panel::before,
+.cert-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(159, 122, 234, 0.12), transparent 45%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+
+.project-panel:hover::before,
+.cert-card:hover::before {
+  opacity: 1;
 }
 
 .project-icon {
@@ -631,19 +665,38 @@ body.dark .course-pill {
 
 .project-link {
   display: inline-flex;
+  align-items: center;
+  gap: 6px;
   margin-top: 14px;
   color: var(--primary);
-  font-weight: 700;
+  font-weight: 800;
+  position: relative;
+}
+
+.project-link::after {
+  content: "↗";
+  font-size: 0.95rem;
+  transition: transform 0.25s ease;
+}
+
+.project-link:hover::after {
+  transform: translate(3px, -3px);
 }
 
 .project-link:hover {
-  opacity: 0.85;
+  opacity: 0.9;
 }
 
 .cert-source {
   color: var(--primary);
   font-weight: 700;
   margin-bottom: 10px;
+}
+
+.cert-action {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
 }
 
 .contact-box {
@@ -671,15 +724,16 @@ body.dark .course-pill {
 }
 
 .contact-links a:hover {
-  transform: translateY(-3px);
+  transform: translateY(-3px) scale(1.03);
+  color: var(--primary);
 }
 
 .reveal {
   opacity: 0;
-  transform: translateY(42px) scale(0.98);
+  transform: translateY(50px) scale(0.96);
   transition:
-    opacity 0.8s var(--ease-smooth),
-    transform 0.8s var(--ease-smooth);
+    opacity 0.85s var(--ease-smooth),
+    transform 0.85s var(--ease-smooth);
   will-change: transform, opacity;
 }
 
