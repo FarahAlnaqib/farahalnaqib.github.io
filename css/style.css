@@ -1086,3 +1086,18 @@ body.dark .course-pill {
   padding: 8px 12px;
   margin-left: 5px;
 }
+.project-icon.mono-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(159,122,234,0.12);
+  border: 1px solid rgba(159,122,234,0.25);
+
+  font-size: 1.4rem;
+
+  filter: grayscale(1) brightness(0.5) sepia(1) hue-rotate(230deg) saturate(4);
+}
