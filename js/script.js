@@ -158,3 +158,104 @@ function blinkEyes() {
 }
 
 setTimeout(blinkEyes, 1500);
+/* ===== AI CHAT ===== */
+
+const aiChat = document.getElementById("aiChat");
+const aiChatToggle = document.getElementById("aiChatToggle");
+const aiChatClose = document.getElementById("aiChatClose");
+const aiChatForm = document.getElementById("aiChatForm");
+const aiChatInput = document.getElementById("aiChatInput");
+const aiChatMessages = document.getElementById("aiChatMessages");
+const aiSuggestionButtons = document.querySelectorAll(".ai-chat-suggestions button");
+
+const aiAnswers = {
+  projects:
+    "Farah has worked on several projects, including Fidak Blood Donation Management System, Smart Parking System, Movie Theater Management System, Maze Solver Game, Bank / ATM Management System, and Tic-Tac-Toe with User System.",
+  skills:
+    "Farah’s skills include C++, Python, JavaScript, PHP, HTML, CSS, Bootstrap, jQuery, MySQL, SQL, Git, GitHub, VS Code, problem solving, system design, data structures, and algorithms.",
+  certificates:
+    "Farah’s certificates include Developing AI Applications with Python and Flask, Application Security for Developers and DevOps Professionals, Python Data Structures, and Monitoring and Observability for Development and DevOps.",
+  contact:
+    "You can contact Farah by email at fabalnaqib@effat.edu.sa, or visit her GitHub and LinkedIn from the Contact section.",
+  education:
+    "Farah is a Computer Science student at Effat University. She started her Computer Science major in 2023 and is currently entering her senior year with a GPA of 3.80.",
+  default:
+    "I can answer questions about Farah’s projects, skills, certificates, education, and contact information."
+};
+
+function addAIMessage(text, type) {
+  if (!aiChatMessages) return;
+
+  const message = document.createElement("div");
+  message.className = `ai-message ${type}`;
+  message.textContent = text;
+
+  aiChatMessages.appendChild(message);
+  aiChatMessages.scrollTop = aiChatMessages.scrollHeight;
+}
+
+function getAIAnswer(question) {
+  const text = question.toLowerCase();
+
+  if (text.includes("project") || text.includes("github") || text.includes("work")) {
+    return aiAnswers.projects;
+  }
+
+  if (text.includes("skill") || text.includes("programming") || text.includes("tools")) {
+    return aiAnswers.skills;
+  }
+
+  if (
+    text.includes("certificate") ||
+    text.includes("certification") ||
+    text.includes("certificates") ||
+    text.includes("ibm") ||
+    text.includes("coursera")
+  ) {
+    return aiAnswers.certificates;
+  }
+
+  if (text.includes("contact") || text.includes("email") || text.includes("linkedin")) {
+    return aiAnswers.contact;
+  }
+
+  if (text.includes("education") || text.includes("university") || text.includes("gpa")) {
+    return aiAnswers.education;
+  }
+
+  return aiAnswers.default;
+}
+
+aiChatToggle?.addEventListener("click", () => {
+  aiChat?.classList.toggle("open");
+});
+
+aiChatClose?.addEventListener("click", () => {
+  aiChat?.classList.remove("open");
+});
+
+aiChatForm?.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const question = aiChatInput.value.trim();
+  if (!question) return;
+
+  addAIMessage(question, "user");
+  aiChatInput.value = "";
+
+  setTimeout(() => {
+    addAIMessage(getAIAnswer(question), "bot");
+  }, 450);
+});
+
+aiSuggestionButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const questionKey = button.dataset.question;
+
+    addAIMessage(button.textContent, "user");
+
+    setTimeout(() => {
+      addAIMessage(aiAnswers[questionKey] || aiAnswers.default, "bot");
+    }, 350);
+  });
+});
