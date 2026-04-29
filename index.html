@@ -4,16 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Farah Alnaqib | Portfolio</title>
+  <meta
+    name="description"
+    content="Farah Alnaqib portfolio website - Computer Science student at Effat University with interests in AI and Cybersecurity."
+  />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
   <link rel="stylesheet" href="css/style.css" />
 </head>
-
 <body>
-  <div class="bg-grid"></div>
   <div class="bg-blur bg-blur-1"></div>
   <div class="bg-blur bg-blur-2"></div>
+  <div class="bg-grid"></div>
 
   <header class="navbar">
     <div class="container nav-content">
@@ -32,8 +40,8 @@
       </nav>
 
       <div class="nav-actions">
-        <button id="themeToggle" class="theme-btn">☀️</button>
-        <button id="menuToggle" class="menu-toggle">☰</button>
+        <button id="themeToggle" class="theme-btn" aria-label="Toggle theme">☀️</button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
       </div>
     </div>
   </header>
@@ -42,60 +50,110 @@
     <section id="home" class="hero section">
       <div class="container hero-grid">
         <div class="hero-text">
-          <span class="eyebrow active-on-load">Computer Science Student</span>
+          <span class="eyebrow reveal active-on-load">Computer Science Student</span>
 
-          <h1 class="hero-title active-on-load delay-1">
+          <h1 class="hero-title reveal active-on-load delay-1">
             Farah <span>Alnaqib</span>
           </h1>
 
-          <p class="hero-subtitle active-on-load delay-2">
+          <p class="hero-subtitle reveal active-on-load delay-2">
             AI & Cybersecurity Enthusiast
           </p>
 
-          <p class="hero-desc active-on-load delay-3">
+          <p class="hero-desc reveal active-on-load delay-3">
             Computer Science student at Effat University with strong interests in
             Artificial Intelligence and Cybersecurity. Passionate about building
             practical systems and developing technical skills through academic and
             hands-on projects.
           </p>
 
-          <div class="hero-buttons active-on-load delay-4">
+          <div class="hero-buttons reveal active-on-load delay-4">
             <a href="#projects" class="btn btn-primary">See My Work</a>
             <a href="#contact" class="btn btn-secondary">Let’s Talk</a>
           </div>
 
           <div class="hero-mini-cards">
-            <div class="mini-card active-on-load delay-5">
+            <div class="mini-card reveal active-on-load delay-5">
               <strong>AI Interest</strong>
               <span>Smart and data-driven solutions</span>
             </div>
 
-            <div class="mini-card active-on-load delay-5">
+            <div class="mini-card reveal active-on-load delay-5">
               <strong>Cyber Focus</strong>
               <span>Secure and reliable systems</span>
             </div>
           </div>
         </div>
 
-        <div class="hero-visual active-on-load delay-2">
-          <div class="avatar-shell" id="avatarShell">
-            <div class="avatar-bg-shape"></div>
+        <div class="hero-visual reveal active-on-load delay-2">
+          <div class="avatar-shell">
+            <svg class="avatar-svg" viewBox="0 10 211.73 180" stroke-linecap="round" stroke-linejoin="round">
+              <defs>
+                <clipPath id="background-clip">
+                  <path d="M39 153.73s31.57 19.71 77.26 15.21 90.18-37.23 90.36-72.33-8.82-80.28-33.59-86.29C136.84-6.57 114.13-5.82 88-2.82S34.73 11.45 16.71 48.24C-1.5 66.64-4.88 125.2 39 153.73z" fill="none" />
+                </clipPath>
 
-            <svg class="avatar-svg" viewBox="0 0 500 500">
-              <ellipse cx="250" cy="250" rx="190" ry="150" fill="#f2e8ff"/>
-              <g class="avatar-face">
-                <path d="M150 250 C140 150 190 95 250 95 C310 95 360 150 350 250 C345 350 300 390 250 390 C200 390 155 350 150 250Z" fill="#8d7ab8"/>
-                <circle cx="250" cy="230" r="95" fill="#efe4d7"/>
-                <path d="M160 230 C165 120 335 120 340 230 C300 185 200 185 160 230Z" fill="#7d6aad"/>
-                <circle cx="218" cy="240" r="9" fill="#27313a"/>
-                <circle cx="282" cy="240" r="9" fill="#27313a"/>
-                <path d="M225 285 Q250 305 275 285" fill="none" stroke="#a18f7f" stroke-width="5" stroke-linecap="round"/>
-                <path d="M205 220 Q220 212 235 220" fill="none" stroke="#a18f7f" stroke-width="5" stroke-linecap="round"/>
-                <path d="M265 220 Q280 212 295 220" fill="none" stroke="#a18f7f" stroke-width="5" stroke-linecap="round"/>
-                <circle cx="195" cy="265" r="8" fill="#f3b5c9" opacity="0.6"/>
-                <circle cx="305" cy="265" r="8" fill="#f3b5c9" opacity="0.6"/>
-                <rect x="220" y="325" width="60" height="70" fill="#efe4d7"/>
-                <path d="M160 410 C180 350 320 350 340 410 Z" fill="#7d6aad"/>
+                <linearGradient id="hair-gradient" x1="102.94" y1="154.47" x2="102.94" y2="36.93" gradientUnits="userSpaceOnUse">
+                  <stop offset="0" stop-color="#8d7ab8" />
+                  <stop offset="0.35" stop-color="#a28fd0" />
+                  <stop offset="1" stop-color="#6f5a9a" />
+                </linearGradient>
+
+                <linearGradient id="avatar-bg" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#f6ecff"/>
+                  <stop offset="100%" stop-color="#efe8ff"/>
+                </linearGradient>
+              </defs>
+
+              <path class="bg-shape" d="M39 153.73s31.57 19.71 77.26 15.21 90.18-37.23 90.36-72.33-10.51-57-35.28-63-50.22 17-76.31 20-60.12-15.88-78.32 2.51S-4.88 125.2 39 153.73z" fill="url(#avatar-bg)" />
+
+              <g clip-path="url(#background-clip)">
+                <g class="avatar" opacity="1">
+                  <g class="body-group">
+                    <path class="shadow shape-shadow" d="M129.86,48.47s6.76,4.91,10,12.07,7,29.06,11.71,39.82,9.06,22.5,9.91,26.42,1.57,5-2.52,10.2-14.63,12-14.63,12l-11.47,6.8s14.87,9.67,17.68,19.32a71.16,71.16,0,0,1,4.34,18.79l-21.39,4.54L113.2,164.85l-13-11.1L90.31,75.37Z" opacity="0.08"/>
+                    <path class="shadow shape-shadow" d="M69.44,54A23.64,23.64,0,0,0,58.91,64.27c-4.39,7.87-4.1,30.52-7.61,41.23S40.76,124.26,41.93,135s2.64,12.27,2.64,12.27a66.65,66.65,0,0,1,14.93,1.88c7,1.89,18.42,5.48,18.42,5.48S63.6,166.53,61.84,176a67.23,67.23,0,0,0-2.34,18.26l20.89,1.9,16.19-34,11.42-12L109.91,75Z" opacity="0.08"/>
+                    <path class="hair-back hair" d="M127.63,45.17c2.65,1.35,11.15,4.2,16.07,23.12,2.88,20.58,3.79,26.07,4.68,30.6s1.2,11.6,6.3,21.15.85,14.65.85,14.65l-7.63,7.08s3.45-12.65-2.63-18.13c0,0,2,14,0,17s-8.75,6.92-8.75,6.92-2.48-4.53-5.06-9.64,2.78,11,.08,12.09-18.82,6.25-30.6,3.86-21.53-5-24-5.79c0,0,2.75-1.37.77-7.62s-1-7.59-1.52-7-2.1,3-1,7.49a7.45,7.45,0,0,1-1.92,7.18s-7.11-4.65-12.77-5.21A51.35,51.35,0,0,1,51,141.14s-5-11.43-.4-23.56S58,104.1,58.32,88.87s2.41-34.66,20.41-45S116.87,35.4,127.63,45.17Z" fill="url(#hair-gradient)" />
+                    <path class="neck" d="M114.26 143.16v-14a9.22 9.22 0 10-18.43 0v14c-15.27 2.84-24.74 15.08-24.74 27.33H139c0-12.24-9.5-24.49-24.74-27.33z" fill="#efe4d7" />
+                    <path class="top" d="M105.61 167c-30.17 0-25.36-40-25.36 15.84h25.35l25-2.14c-.05-55.79 5.17-13.7-24.99-13.7z" fill="#ffffff" stroke="#62527f" stroke-width=".4" />
+                    <path class="shoulder" d="M95.82 142.87c-16 1.84-29.37 19.5-29.37 40h29.37z" fill="#8c78b8" />
+                    <path class="shoulder" d="M114.23 142.67c15.76 1.85 29 19.6 29 40.2h-29z" fill="#7a67a7" />
+                  </g>
+
+                  <path class="shadow shape-shadow" d="M95.82 122.36h18.41v14.31s-10.5 5.54-18.41 0z" fill="#efceb9" />
+
+                  <g class="head">
+                    <g class="ear-left ear">
+                      <path d="M63.52 105.14A8.21 8.21 0 0072 113.2a8.36 8.36 0 008.51-8.1A8.21 8.21 0 0072 97a8.36 8.36 0 00-8.48 8.14z" fill="#efe4d7" />
+                    </g>
+
+                    <g class="ear-right ear">
+                      <path d="M144.37 105.24a8.2 8.2 0 01-8.37 8.06 8.35 8.35 0 01-8.51-8.1 8.21 8.21 0 018.42-8.06 8.35 8.35 0 018.46 8.1z" fill="#efe4d7" />
+                    </g>
+
+                    <g class="face">
+                      <rect x="73.99" y="48.26" width="61.54" height="80.49" rx="26.08" transform="rotate(180 104.76 88.5)" fill="#efe4d7" />
+
+                      <g class="inner-face">
+                        <path class="eyebrow-right brow" d="M120.73 79a9 9 0 00-4-1.22 9.8 9.8 0 00-4.19.87" fill="none" stroke="#a18f7f" stroke-width="1.04" />
+                        <path class="eyebrow-left brow" d="M97.12 79.41a9.53 9.53 0 00-4-1.11 10.58 10.58 0 00-4.2.76" fill="none" stroke="#a18f7f" stroke-width="1.04" />
+                        <path class="mouth" d="M97 107.52s7.06 4.62 14 1.59" fill="none" stroke="#a18f7f" stroke-width="1.04" />
+
+                        <g class="eyes">
+                          <path class="eye-left eye" d="M89.48 87.37c-.07 2.08 1.25 3.8 2.94 3.85s3.1-1.59 3.16-3.67-1.25-3.8-2.94-3.85-3.1 1.59-3.16 3.67z" fill="#2b343b" />
+                          <path class="eye-right eye" d="M113.67 87.37c-.07 2.08 1.25 3.8 2.94 3.85s3.1-1.59 3.16-3.67-1.25-3.8-2.94-3.85-3.1 1.59-3.16 3.67z" fill="#2b343b" />
+                          <path class="eye-right-2 eye-blink" d="M114.11 88a5.72 5.72 0 002.48.72 6.46 6.46 0 002.59-.45" opacity="0" fill="none" stroke="#282828" stroke-width="1.04" />
+                          <path class="eye-left-2 eye-blink" d="M89.85 88a5.77 5.77 0 002.56.3 6.48 6.48 0 002.49-.87" fill="none" opacity="0" stroke="#282828" stroke-width="1.04" />
+                        </g>
+
+                        <path class="nose" d="M102.39 98.13s3.09 1.55 5.78 0" fill="none" stroke="#dccfbd" />
+                        <path class="blush-left" d="M87 98.2c1.5 2 4.8 2 6.4 0" fill="none" stroke="#f0b6c8" stroke-width="1.2" opacity=".7"/>
+                        <path class="blush-right" d="M116.4 98.2c1.5 2 4.8 2 6.4 0" fill="none" stroke="#f0b6c8" stroke-width="1.2" opacity=".7"/>
+                      </g>
+
+                      <path class="hair-front" d="M134.1,57.61C129.22,51.79,118,45,115.33,44.84s-13-1.87-20.65,0-16,4.51-18.77,8.26-6.17,18-4.77,24.41c0,0,3-3.09,10.46-5.73h0s.74-6.33,1.45-7.18a32.29,32.29,0,0,0-.1,6.73,59.67,59.67,0,0,1,8.22-2,37,37,0,0,1,.25-8.11,67.11,67.11,0,0,0,.54,8c2-.32,4.18-.59,6.52-.78h0s.18-2.82.61-5.5c0,0,.28,3.33.6,5.42,1.78-.12,3.64-.19,5.62-.21a76.76,76.76,0,0,1,9.11.45c-.05-2.15,0-6.82-.22-7.36s1.07,2.06,1.54,7.52a51.14,51.14,0,0,1,8.84,1.92c.23-2.37.41-5.93-.3-7.88,0,0,2.1,5,1.9,8.42h0c8.36,3,11.06,7.25,11.06,7.25S139,63.43,134.1,57.61Z" fill="url(#hair-gradient)" />
+                    </g>
+                  </g>
+                </g>
               </g>
             </svg>
 
@@ -121,9 +179,12 @@
               with a strong interest in Artificial Intelligence and Cybersecurity.
             </p>
             <p>
-              I am following a general track that allows me to explore both areas
+              I am following a general track that allows me to explore both fields
               while building a solid foundation in software development,
-              problem-solving, and system design.
+              problem-solving, and system design. Throughout my academic journey,
+              I have worked on projects ranging from web applications to
+              system-based solutions, gaining hands-on experience in programming,
+              databases, and algorithms.
             </p>
             <p>
               As I approach graduation, I am focused on strengthening my technical
@@ -169,9 +230,9 @@
             <p class="edu-place">Effat University</p>
             <p class="edu-meta">2022 – Present</p>
             <ul class="clean-list">
-              <li>Completed foundation year in 2022</li>
+              <li>Completed foundation year (English Program) in 2022</li>
               <li>Started Computer Science major in 2023</li>
-              <li>Currently entering final senior year</li>
+              <li>Currently entering final (senior) year</li>
             </ul>
           </div>
 
@@ -180,9 +241,9 @@
             <p class="edu-place">Good Standing</p>
             <p class="edu-meta">Current GPA: 3.80</p>
             <ul class="clean-list">
+              <li>Strong academic progress across core CS courses</li>
               <li>Focused on AI, Cybersecurity, and software systems</li>
-              <li>Strong progress across core Computer Science courses</li>
-              <li>Building practical experience through projects</li>
+              <li>Building practical knowledge through projects and coursework</li>
             </ul>
           </div>
         </div>
@@ -227,6 +288,7 @@
               <span class="course-pill">Object-Oriented Programming</span>
               <span class="course-pill">Advanced Programming</span>
               <span class="course-pill">Web Application Development</span>
+              <span class="course-pill">Introduction to Computing</span>
               <span class="course-pill">Principles of Computing</span>
             </div>
           </div>
@@ -245,43 +307,91 @@
           <article class="project-panel glass-card reveal stagger-1">
             <div class="project-icon">🩸</div>
             <h3>Fidak – Blood Donation Management System</h3>
-            <p>A web-based system for managing donors, blood inventory, and donation requests.</p>
-            <a class="project-link" href="https://github.com/FarahAlnaqib/Fidak-Blood-Donation-Management-System" target="_blank">View on GitHub</a>
+            <p>
+              A full-stack web-based blood donation management system designed to
+              connect donors, hospitals, and healthcare organizations.
+            </p>
+            <ul class="clean-list">
+              <li>Donor registration and profile management</li>
+              <li>Blood request system and real-time donor search</li>
+              <li>Admin dashboard with CRUD operations</li>
+              <li>Arabic and English support</li>
+            </ul>
           </article>
 
           <article class="project-panel glass-card reveal stagger-2">
             <div class="project-icon">🚗</div>
             <h3>Smart Parking System</h3>
-            <p>A system designed to manage parking spaces, availability tracking, and parking organization.</p>
-            <a class="project-link" href="https://github.com/FarahAlnaqib/Smart-Parking-System" target="_blank">View on GitHub</a>
+            <p>
+              A smart parking platform focused on reservations, real-time
+              availability, QR-based access, and automated violation management.
+            </p>
+            <ul class="clean-list">
+              <li>Reservation workflow and parking availability</li>
+              <li>Violation management and admin configuration</li>
+              <li>System design, diagrams, and requirement modeling</li>
+            </ul>
           </article>
 
           <article class="project-panel glass-card reveal stagger-3">
             <div class="project-icon">🎬</div>
             <h3>Movie Theater Management System</h3>
-            <p>A desktop-based system for managing movies, screenings, staff, reviews, and database operations.</p>
-            <a class="project-link" href="https://github.com/FarahAlnaqib/Movie-Theater-Management-System" target="_blank">View on GitHub</a>
+            <p>
+              Desktop-based system for managing movies, screenings, events, staff,
+              and reviews using Python and MySQL.
+            </p>
+            <ul class="clean-list">
+              <li>GUI with Tkinter</li>
+              <li>Relational database design and CRUD</li>
+              <li>Scheduling, reviews, and analytics support</li>
+            </ul>
           </article>
 
           <article class="project-panel glass-card reveal stagger-4">
             <div class="project-icon">🧩</div>
-            <h3>Maze Solver</h3>
-            <p>A C++ maze-solving project using stack and queue concepts to apply algorithmic problem solving.</p>
-            <a class="project-link" href="https://github.com/FarahAlnaqib/Maze-Solver" target="_blank">View on GitHub</a>
+            <h3>Maze Solver Game</h3>
+            <p>
+              A C++ maze-solving application applying stack and queue concepts to
+              implement pathfinding logic.
+            </p>
+            <ul class="clean-list">
+              <li>Algorithmic thinking and traversal logic</li>
+              <li>Pathfinding with core data structures</li>
+            </ul>
+            <a
+              class="project-link"
+              href="https://github.com/LamaAT1/Maze-Solver.git"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View on GitHub
+            </a>
           </article>
 
           <article class="project-panel glass-card reveal stagger-5">
-            <div class="project-icon">💳</div>
-            <h3>Bank ATM Management System</h3>
-            <p>A system that simulates ATM operations including accounts, deposits, withdrawals, and transactions.</p>
-            <a class="project-link" href="https://github.com/FarahAlnaqib/Bank-ATM-Management-System" target="_blank">View on GitHub</a>
+            <div class="project-icon">🏦</div>
+            <h3>Bank / ATM Management System</h3>
+            <p>
+              Console-based banking system simulating real ATM operations such as
+              deposits, withdrawals, and balance inquiries.
+            </p>
+            <ul class="clean-list">
+              <li>Transaction handling and account management</li>
+              <li>Structured logic and interactive user flow</li>
+            </ul>
           </article>
 
           <article class="project-panel glass-card reveal stagger-6">
-            <div class="project-icon">❌⭕</div>
-            <h3>Tic Tac Toe with User System</h3>
-            <p>An interactive Tic Tac Toe game with user-based gameplay and game logic implementation.</p>
-            <a class="project-link" href="https://github.com/FarahAlnaqib/Tic-Tac-Toe-with-User-System" target="_blank">View on GitHub</a>
+            <div class="project-icon">🎮</div>
+            <h3>Tic-Tac-Toe with User System</h3>
+            <p>
+              Interactive C++ game featuring user login, multiple board sizes,
+              and player statistics tracking.
+            </p>
+            <ul class="clean-list">
+              <li>Authentication and gameplay integration</li>
+              <li>Statistics and game mode management</li>
+            </ul>
           </article>
         </div>
       </div>
@@ -296,34 +406,25 @@
 
         <div class="certifications-grid">
           <article class="glass-card cert-card reveal stagger-1">
-            <h3>Developing AI Applications with Python and Flask</h3>
-            <p class="cert-source">IBM • 2025</p>
+            <h3>Coursera Certificate</h3>
+            <p class="cert-source">Coursera</p>
+            <p>Add your top certificate title here.</p>
+            <a href="#" class="project-link">View Certificate</a>
           </article>
 
           <article class="glass-card cert-card reveal stagger-2">
-            <h3>Application Security for Developers and DevOps Professionals</h3>
-            <p class="cert-source">IBM • 2025</p>
+            <h3>Coursera Certificate</h3>
+            <p class="cert-source">Coursera</p>
+            <p>Add another certificate related to AI, Cybersecurity, or CS.</p>
+            <a href="#" class="project-link">View Certificate</a>
           </article>
 
           <article class="glass-card cert-card reveal stagger-3">
-            <h3>Python Data Structures</h3>
-            <p class="cert-source">University of Michigan • 2023</p>
+            <h3>Coursera Certificate</h3>
+            <p class="cert-source">Coursera</p>
+            <p>Replace this card with your strongest course certificate.</p>
+            <a href="#" class="project-link">View Certificate</a>
           </article>
-
-          <article class="glass-card cert-card reveal stagger-4">
-            <h3>Monitoring and Observability for Development and DevOps</h3>
-            <p class="cert-source">IBM • 2025</p>
-          </article>
-        </div>
-
-        <div class="cert-action reveal stagger-4">
-          <a
-            class="btn btn-primary"
-            href="https://www.linkedin.com/in/farah-alnaqib-691157326/details/certifications/"
-            target="_blank"
-          >
-            View All Certifications on LinkedIn
-          </a>
         </div>
       </div>
     </section>
@@ -385,19 +486,543 @@
         <div class="contact-box glass-card reveal">
           <span class="section-kicker">Contact</span>
           <h2>Let’s connect.</h2>
-          <p>Currently seeking opportunities to grow, build, and contribute to real-world projects.</p>
+          <p>
+            Currently seeking opportunities to grow, build, and contribute to real-world projects.
+          </p>
 
           <div class="contact-links">
             <a href="mailto:fabalnaqib@effat.edu.sa">fabalnaqib@effat.edu.sa</a>
-            <a href="https://github.com/FarahAlnaqib" target="_blank">GitHub</a>
-            <a href="https://linkedin.com/in/farah-alnaqib-691157326" target="_blank">LinkedIn</a>
+            <a href="https://github.com/FarahAlnaqib" target="_blank" rel="noopener noreferrer">
+              GitHub
+            </a>
+            <a
+              href="https://linkedin.com/in/farah-alnaqib-691157326"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </a>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <button class="scroll-top" id="scrollTopBtn">↑</button>
+  <button class="scroll-top" id="scrollTopBtn" aria-label="Scroll to top">↑</button>
+
+  <script src="js/script.js"></script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Farah Alnaqib | Portfolio</title>
+  <meta
+    name="description"
+    content="Farah Alnaqib portfolio website - Computer Science student at Effat University with interests in AI and Cybersecurity."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="bg-blur bg-blur-1"></div>
+  <div class="bg-blur bg-blur-2"></div>
+  <div class="bg-grid"></div>
+
+  <header class="navbar">
+    <div class="container nav-content">
+      <a href="#home" class="logo">Farah</a>
+
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-links">
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="themeToggle" class="theme-btn" aria-label="Toggle theme">☀️</button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <span class="eyebrow reveal active-on-load">Computer Science Student</span>
+
+          <h1 class="hero-title reveal active-on-load delay-1">
+            Farah <span>Alnaqib</span>
+          </h1>
+
+          <p class="hero-subtitle reveal active-on-load delay-2">
+            AI & Cybersecurity Enthusiast
+          </p>
+
+          <p class="hero-desc reveal active-on-load delay-3">
+            Computer Science student at Effat University with strong interests in
+            Artificial Intelligence and Cybersecurity. Passionate about building
+            practical systems and developing technical skills through academic and
+            hands-on projects.
+          </p>
+
+          <div class="hero-buttons reveal active-on-load delay-4">
+            <a href="#projects" class="btn btn-primary">See My Work</a>
+            <a href="#contact" class="btn btn-secondary">Let’s Talk</a>
+          </div>
+
+          <div class="hero-mini-cards">
+            <div class="mini-card reveal active-on-load delay-5">
+              <strong>AI Interest</strong>
+              <span>Smart and data-driven solutions</span>
+            </div>
+
+            <div class="mini-card reveal active-on-load delay-5">
+              <strong>Cyber Focus</strong>
+              <span>Secure and reliable systems</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal active-on-load delay-2">
+          <div class="avatar-shell">
+            <svg class="avatar-svg" viewBox="0 10 211.73 180" stroke-linecap="round" stroke-linejoin="round">
+              <defs>
+                <clipPath id="background-clip">
+                  <path d="M39 153.73s31.57 19.71 77.26 15.21 90.18-37.23 90.36-72.33-8.82-80.28-33.59-86.29C136.84-6.57 114.13-5.82 88-2.82S34.73 11.45 16.71 48.24C-1.5 66.64-4.88 125.2 39 153.73z" fill="none" />
+                </clipPath>
+
+                <linearGradient id="hair-gradient" x1="102.94" y1="154.47" x2="102.94" y2="36.93" gradientUnits="userSpaceOnUse">
+                  <stop offset="0" stop-color="#8d7ab8" />
+                  <stop offset="0.35" stop-color="#a28fd0" />
+                  <stop offset="1" stop-color="#6f5a9a" />
+                </linearGradient>
+
+                <linearGradient id="avatar-bg" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#f6ecff"/>
+                  <stop offset="100%" stop-color="#efe8ff"/>
+                </linearGradient>
+              </defs>
+
+              <path class="bg-shape" d="M39 153.73s31.57 19.71 77.26 15.21 90.18-37.23 90.36-72.33-10.51-57-35.28-63-50.22 17-76.31 20-60.12-15.88-78.32 2.51S-4.88 125.2 39 153.73z" fill="url(#avatar-bg)" />
+
+              <g clip-path="url(#background-clip)">
+                <g class="avatar" opacity="1">
+                  <g class="body-group">
+                    <path class="shadow shape-shadow" d="M129.86,48.47s6.76,4.91,10,12.07,7,29.06,11.71,39.82,9.06,22.5,9.91,26.42,1.57,5-2.52,10.2-14.63,12-14.63,12l-11.47,6.8s14.87,9.67,17.68,19.32a71.16,71.16,0,0,1,4.34,18.79l-21.39,4.54L113.2,164.85l-13-11.1L90.31,75.37Z" opacity="0.08"/>
+                    <path class="shadow shape-shadow" d="M69.44,54A23.64,23.64,0,0,0,58.91,64.27c-4.39,7.87-4.1,30.52-7.61,41.23S40.76,124.26,41.93,135s2.64,12.27,2.64,12.27a66.65,66.65,0,0,1,14.93,1.88c7,1.89,18.42,5.48,18.42,5.48S63.6,166.53,61.84,176a67.23,67.23,0,0,0-2.34,18.26l20.89,1.9,16.19-34,11.42-12L109.91,75Z" opacity="0.08"/>
+                    <path class="hair-back hair" d="M127.63,45.17c2.65,1.35,11.15,4.2,16.07,23.12,2.88,20.58,3.79,26.07,4.68,30.6s1.2,11.6,6.3,21.15.85,14.65.85,14.65l-7.63,7.08s3.45-12.65-2.63-18.13c0,0,2,14,0,17s-8.75,6.92-8.75,6.92-2.48-4.53-5.06-9.64,2.78,11,.08,12.09-18.82,6.25-30.6,3.86-21.53-5-24-5.79c0,0,2.75-1.37.77-7.62s-1-7.59-1.52-7-2.1,3-1,7.49a7.45,7.45,0,0,1-1.92,7.18s-7.11-4.65-12.77-5.21A51.35,51.35,0,0,1,51,141.14s-5-11.43-.4-23.56S58,104.1,58.32,88.87s2.41-34.66,20.41-45S116.87,35.4,127.63,45.17Z" fill="url(#hair-gradient)" />
+                    <path class="neck" d="M114.26 143.16v-14a9.22 9.22 0 10-18.43 0v14c-15.27 2.84-24.74 15.08-24.74 27.33H139c0-12.24-9.5-24.49-24.74-27.33z" fill="#efe4d7" />
+                    <path class="top" d="M105.61 167c-30.17 0-25.36-40-25.36 15.84h25.35l25-2.14c-.05-55.79 5.17-13.7-24.99-13.7z" fill="#ffffff" stroke="#62527f" stroke-width=".4" />
+                    <path class="shoulder" d="M95.82 142.87c-16 1.84-29.37 19.5-29.37 40h29.37z" fill="#8c78b8" />
+                    <path class="shoulder" d="M114.23 142.67c15.76 1.85 29 19.6 29 40.2h-29z" fill="#7a67a7" />
+                  </g>
+
+                  <path class="shadow shape-shadow" d="M95.82 122.36h18.41v14.31s-10.5 5.54-18.41 0z" fill="#efceb9" />
+
+                  <g class="head">
+                    <g class="ear-left ear">
+                      <path d="M63.52 105.14A8.21 8.21 0 0072 113.2a8.36 8.36 0 008.51-8.1A8.21 8.21 0 0072 97a8.36 8.36 0 00-8.48 8.14z" fill="#efe4d7" />
+                    </g>
+
+                    <g class="ear-right ear">
+                      <path d="M144.37 105.24a8.2 8.2 0 01-8.37 8.06 8.35 8.35 0 01-8.51-8.1 8.21 8.21 0 018.42-8.06 8.35 8.35 0 018.46 8.1z" fill="#efe4d7" />
+                    </g>
+
+                    <g class="face">
+                      <rect x="73.99" y="48.26" width="61.54" height="80.49" rx="26.08" transform="rotate(180 104.76 88.5)" fill="#efe4d7" />
+
+                      <g class="inner-face">
+                        <path class="eyebrow-right brow" d="M120.73 79a9 9 0 00-4-1.22 9.8 9.8 0 00-4.19.87" fill="none" stroke="#a18f7f" stroke-width="1.04" />
+                        <path class="eyebrow-left brow" d="M97.12 79.41a9.53 9.53 0 00-4-1.11 10.58 10.58 0 00-4.2.76" fill="none" stroke="#a18f7f" stroke-width="1.04" />
+                        <path class="mouth" d="M97 107.52s7.06 4.62 14 1.59" fill="none" stroke="#a18f7f" stroke-width="1.04" />
+
+                        <g class="eyes">
+                          <path class="eye-left eye" d="M89.48 87.37c-.07 2.08 1.25 3.8 2.94 3.85s3.1-1.59 3.16-3.67-1.25-3.8-2.94-3.85-3.1 1.59-3.16 3.67z" fill="#2b343b" />
+                          <path class="eye-right eye" d="M113.67 87.37c-.07 2.08 1.25 3.8 2.94 3.85s3.1-1.59 3.16-3.67-1.25-3.8-2.94-3.85-3.1 1.59-3.16 3.67z" fill="#2b343b" />
+                          <path class="eye-right-2 eye-blink" d="M114.11 88a5.72 5.72 0 002.48.72 6.46 6.46 0 002.59-.45" opacity="0" fill="none" stroke="#282828" stroke-width="1.04" />
+                          <path class="eye-left-2 eye-blink" d="M89.85 88a5.77 5.77 0 002.56.3 6.48 6.48 0 002.49-.87" fill="none" opacity="0" stroke="#282828" stroke-width="1.04" />
+                        </g>
+
+                        <path class="nose" d="M102.39 98.13s3.09 1.55 5.78 0" fill="none" stroke="#dccfbd" />
+                        <path class="blush-left" d="M87 98.2c1.5 2 4.8 2 6.4 0" fill="none" stroke="#f0b6c8" stroke-width="1.2" opacity=".7"/>
+                        <path class="blush-right" d="M116.4 98.2c1.5 2 4.8 2 6.4 0" fill="none" stroke="#f0b6c8" stroke-width="1.2" opacity=".7"/>
+                      </g>
+
+                      <path class="hair-front" d="M134.1,57.61C129.22,51.79,118,45,115.33,44.84s-13-1.87-20.65,0-16,4.51-18.77,8.26-6.17,18-4.77,24.41c0,0,3-3.09,10.46-5.73h0s.74-6.33,1.45-7.18a32.29,32.29,0,0,0-.1,6.73,59.67,59.67,0,0,1,8.22-2,37,37,0,0,1,.25-8.11,67.11,67.11,0,0,0,.54,8c2-.32,4.18-.59,6.52-.78h0s.18-2.82.61-5.5c0,0,.28,3.33.6,5.42,1.78-.12,3.64-.19,5.62-.21a76.76,76.76,0,0,1,9.11.45c-.05-2.15,0-6.82-.22-7.36s1.07,2.06,1.54,7.52a51.14,51.14,0,0,1,8.84,1.92c.23-2.37.41-5.93-.3-7.88,0,0,2.1,5,1.9,8.42h0c8.36,3,11.06,7.25,11.06,7.25S139,63.43,134.1,57.61Z" fill="url(#hair-gradient)" />
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </svg>
+
+            <div class="floating-badge badge-1">AI / Cyber</div>
+            <div class="floating-badge badge-2">CS Student</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section section-soft">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="section-kicker">About Me</span>
+          <h2>Building practical systems with clarity and purpose.</h2>
+        </div>
+
+        <div class="about-layout">
+          <div class="about-main glass-card reveal stagger-1">
+            <h3>Farah Alnaqib</h3>
+            <p>
+              Hi, I’m Farah Alnaqib, a Computer Science student at Effat University
+              with a strong interest in Artificial Intelligence and Cybersecurity.
+            </p>
+            <p>
+              I am following a general track that allows me to explore both fields
+              while building a solid foundation in software development,
+              problem-solving, and system design. Throughout my academic journey,
+              I have worked on projects ranging from web applications to
+              system-based solutions, gaining hands-on experience in programming,
+              databases, and algorithms.
+            </p>
+            <p>
+              As I approach graduation, I am focused on strengthening my technical
+              skills and building impactful solutions that reflect both creativity
+              and technical depth.
+            </p>
+          </div>
+
+          <div class="about-side">
+            <div class="glass-card reveal stagger-2">
+              <h4>Focus Areas</h4>
+              <div class="tag-list">
+                <span class="tag">Artificial Intelligence</span>
+                <span class="tag">Cybersecurity</span>
+                <span class="tag">Software Development</span>
+                <span class="tag">Problem Solving</span>
+              </div>
+            </div>
+
+            <div class="glass-card reveal stagger-3">
+              <h4>Professional Focus</h4>
+              <p>
+                Focused on building a strong foundation in Computer Science while
+                exploring Artificial Intelligence, Cybersecurity, and practical
+                software solutions through academic and hands-on projects.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="section-kicker">Education</span>
+          <h2>Academic foundation and growth.</h2>
+        </div>
+
+        <div class="education-grid">
+          <div class="glass-card reveal stagger-1">
+            <h3>Bachelor of Science in Computer Science</h3>
+            <p class="edu-place">Effat University</p>
+            <p class="edu-meta">2022 – Present</p>
+            <ul class="clean-list">
+              <li>Completed foundation year (English Program) in 2022</li>
+              <li>Started Computer Science major in 2023</li>
+              <li>Currently entering final (senior) year</li>
+            </ul>
+          </div>
+
+          <div class="glass-card reveal stagger-2">
+            <h3>Academic Standing</h3>
+            <p class="edu-place">Good Standing</p>
+            <p class="edu-meta">Current GPA: 3.80</p>
+            <ul class="clean-list">
+              <li>Strong academic progress across core CS courses</li>
+              <li>Focused on AI, Cybersecurity, and software systems</li>
+              <li>Building practical knowledge through projects and coursework</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="courses" class="section section-soft">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="section-kicker">Courses</span>
+          <h2>Relevant coursework in Computer Science, AI, and Cybersecurity.</h2>
+        </div>
+
+        <div class="courses-groups">
+          <div class="glass-card reveal stagger-1">
+            <h3>Artificial Intelligence & Data</h3>
+            <div class="pill-grid">
+              <span class="course-pill">Artificial Intelligence</span>
+              <span class="course-pill">Linear Algebra</span>
+              <span class="course-pill">Statistics for Computing</span>
+              <span class="course-pill">Algorithm Analysis</span>
+              <span class="course-pill">Research & Innovation</span>
+            </div>
+          </div>
+
+          <div class="glass-card reveal stagger-2">
+            <h3>Cybersecurity & Systems</h3>
+            <div class="pill-grid">
+              <span class="course-pill">Information & Cybersecurity</span>
+              <span class="course-pill">Computer Networks</span>
+              <span class="course-pill">Operating Systems</span>
+              <span class="course-pill">Computer Architecture & Organization</span>
+            </div>
+          </div>
+
+          <div class="glass-card reveal stagger-3">
+            <h3>Core Computer Science</h3>
+            <div class="pill-grid">
+              <span class="course-pill">Data Structures & Algorithms</span>
+              <span class="course-pill">Software Engineering</span>
+              <span class="course-pill">Database Systems</span>
+              <span class="course-pill">Object-Oriented Programming</span>
+              <span class="course-pill">Advanced Programming</span>
+              <span class="course-pill">Web Application Development</span>
+              <span class="course-pill">Introduction to Computing</span>
+              <span class="course-pill">Principles of Computing</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="section-kicker">Projects</span>
+          <h2>Selected academic and technical projects.</h2>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-panel glass-card reveal stagger-1">
+            <div class="project-icon">🩸</div>
+            <h3>Fidak – Blood Donation Management System</h3>
+            <p>
+              A full-stack web-based blood donation management system designed to
+              connect donors, hospitals, and healthcare organizations.
+            </p>
+            <ul class="clean-list">
+              <li>Donor registration and profile management</li>
+              <li>Blood request system and real-time donor search</li>
+              <li>Admin dashboard with CRUD operations</li>
+              <li>Arabic and English support</li>
+            </ul>
+          </article>
+
+          <article class="project-panel glass-card reveal stagger-2">
+            <div class="project-icon">🚗</div>
+            <h3>Smart Parking System</h3>
+            <p>
+              A smart parking platform focused on reservations, real-time
+              availability, QR-based access, and automated violation management.
+            </p>
+            <ul class="clean-list">
+              <li>Reservation workflow and parking availability</li>
+              <li>Violation management and admin configuration</li>
+              <li>System design, diagrams, and requirement modeling</li>
+            </ul>
+          </article>
+
+          <article class="project-panel glass-card reveal stagger-3">
+            <div class="project-icon">🎬</div>
+            <h3>Movie Theater Management System</h3>
+            <p>
+              Desktop-based system for managing movies, screenings, events, staff,
+              and reviews using Python and MySQL.
+            </p>
+            <ul class="clean-list">
+              <li>GUI with Tkinter</li>
+              <li>Relational database design and CRUD</li>
+              <li>Scheduling, reviews, and analytics support</li>
+            </ul>
+          </article>
+
+          <article class="project-panel glass-card reveal stagger-4">
+            <div class="project-icon">🧩</div>
+            <h3>Maze Solver Game</h3>
+            <p>
+              A C++ maze-solving application applying stack and queue concepts to
+              implement pathfinding logic.
+            </p>
+            <ul class="clean-list">
+              <li>Algorithmic thinking and traversal logic</li>
+              <li>Pathfinding with core data structures</li>
+            </ul>
+            <a
+              class="project-link"
+              href="https://github.com/LamaAT1/Maze-Solver.git"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View on GitHub
+            </a>
+          </article>
+
+          <article class="project-panel glass-card reveal stagger-5">
+            <div class="project-icon">🏦</div>
+            <h3>Bank / ATM Management System</h3>
+            <p>
+              Console-based banking system simulating real ATM operations such as
+              deposits, withdrawals, and balance inquiries.
+            </p>
+            <ul class="clean-list">
+              <li>Transaction handling and account management</li>
+              <li>Structured logic and interactive user flow</li>
+            </ul>
+          </article>
+
+          <article class="project-panel glass-card reveal stagger-6">
+            <div class="project-icon">🎮</div>
+            <h3>Tic-Tac-Toe with User System</h3>
+            <p>
+              Interactive C++ game featuring user login, multiple board sizes,
+              and player statistics tracking.
+            </p>
+            <ul class="clean-list">
+              <li>Authentication and gameplay integration</li>
+              <li>Statistics and game mode management</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="certifications" class="section section-soft">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="section-kicker">Certifications</span>
+          <h2>Selected certificates supporting my technical growth.</h2>
+        </div>
+
+        <div class="certifications-grid">
+          <article class="glass-card cert-card reveal stagger-1">
+            <h3>Coursera Certificate</h3>
+            <p class="cert-source">Coursera</p>
+            <p>Add your top certificate title here.</p>
+            <a href="#" class="project-link">View Certificate</a>
+          </article>
+
+          <article class="glass-card cert-card reveal stagger-2">
+            <h3>Coursera Certificate</h3>
+            <p class="cert-source">Coursera</p>
+            <p>Add another certificate related to AI, Cybersecurity, or CS.</p>
+            <a href="#" class="project-link">View Certificate</a>
+          </article>
+
+          <article class="glass-card cert-card reveal stagger-3">
+            <h3>Coursera Certificate</h3>
+            <p class="cert-source">Coursera</p>
+            <p>Replace this card with your strongest course certificate.</p>
+            <a href="#" class="project-link">View Certificate</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="section-kicker">Skills</span>
+          <h2>Technical skills built through coursework and projects.</h2>
+        </div>
+
+        <div class="skills-cards">
+          <div class="glass-card reveal stagger-1">
+            <h3>Programming</h3>
+            <div class="pill-grid">
+              <span class="skill-pill">C++</span>
+              <span class="skill-pill">Python</span>
+              <span class="skill-pill">JavaScript</span>
+              <span class="skill-pill">PHP</span>
+            </div>
+          </div>
+
+          <div class="glass-card reveal stagger-2">
+            <h3>Web Development</h3>
+            <div class="pill-grid">
+              <span class="skill-pill">HTML</span>
+              <span class="skill-pill">CSS</span>
+              <span class="skill-pill">Bootstrap</span>
+              <span class="skill-pill">jQuery</span>
+            </div>
+          </div>
+
+          <div class="glass-card reveal stagger-3">
+            <h3>Database & Tools</h3>
+            <div class="pill-grid">
+              <span class="skill-pill">MySQL</span>
+              <span class="skill-pill">SQL</span>
+              <span class="skill-pill">Git</span>
+              <span class="skill-pill">GitHub</span>
+              <span class="skill-pill">VS Code</span>
+            </div>
+          </div>
+
+          <div class="glass-card reveal stagger-4">
+            <h3>Core Strengths</h3>
+            <div class="pill-grid">
+              <span class="skill-pill">Problem Solving</span>
+              <span class="skill-pill">System Design</span>
+              <span class="skill-pill">Data Structures</span>
+              <span class="skill-pill">Algorithms</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section section-soft">
+      <div class="container">
+        <div class="contact-box glass-card reveal">
+          <span class="section-kicker">Contact</span>
+          <h2>Let’s connect.</h2>
+          <p>
+            Currently seeking opportunities to grow, build, and contribute to real-world projects.
+          </p>
+
+          <div class="contact-links">
+            <a href="mailto:fabalnaqib@effat.edu.sa">fabalnaqib@effat.edu.sa</a>
+            <a href="https://github.com/FarahAlnaqib" target="_blank" rel="noopener noreferrer">
+              GitHub
+            </a>
+            <a
+              href="https://linkedin.com/in/farah-alnaqib-691157326"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <button class="scroll-top" id="scrollTopBtn" aria-label="Scroll to top">↑</button>
 
   <script src="js/script.js"></script>
 </body>
