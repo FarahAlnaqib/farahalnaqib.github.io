@@ -1101,3 +1101,27 @@ body.dark .course-pill {
 
   filter: grayscale(1) brightness(0.5) sepia(1) hue-rotate(230deg) saturate(4);
 }
+.project-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(159,122,234,0.12);
+  border: 1px solid rgba(159,122,234,0.25);
+  transition: 0.3s;
+}
+
+.project-icon svg {
+  width: 26px;
+  height: 26px;
+  stroke: var(--primary);
+  stroke-width: 1.8;
+}
+
+.project-panel:hover .project-icon {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(159,122,234,0.25);
+}
