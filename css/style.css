@@ -53,6 +53,7 @@ body {
     opacity: 0;
     transform: translateY(12px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -139,7 +140,7 @@ button {
   height: 340px;
   right: -70px;
   top: 180px;
-  background: rgba(167, 139, 250, 0.30);
+  background: rgba(167, 139, 250, 0.3);
 }
 
 .navbar {
@@ -358,7 +359,7 @@ body.dark .navbar.scrolled {
   background: linear-gradient(
     120deg,
     transparent 30%,
-    rgba(255,255,255,0.35) 50%,
+    rgba(255, 255, 255, 0.35) 50%,
     transparent 70%
   );
   transition: left 0.65s var(--ease-smooth);
@@ -443,8 +444,14 @@ body.dark .mini-card {
 }
 
 @keyframes floatAvatar {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 .avatar-svg {
@@ -479,8 +486,14 @@ body.dark .mini-card {
 }
 
 @keyframes badgeFloat {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-8px); }
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
 }
 
 .section-heading {
@@ -568,7 +581,7 @@ body.dark .mini-card {
 .course-pill {
   padding: 12px 16px;
   border-radius: 999px;
-  background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(246,239,255,0.95));
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(246, 239, 255, 0.95));
   border: 1px solid rgba(159, 122, 234, 0.18);
   box-shadow: var(--shadow-soft);
   color: #6d56a0;
@@ -581,7 +594,7 @@ body.dark .mini-card {
 body.dark .tag,
 body.dark .skill-pill,
 body.dark .course-pill {
-  background: rgba(255,255,255,0.05);
+  background: rgba(255, 255, 255, 0.05);
   color: var(--text);
 }
 
@@ -659,35 +672,30 @@ body.dark .course-pill {
 }
 
 .project-icon {
-  width: 56px;
-  height: 56px;
+  width: 60px;
+  height: 60px;
   border-radius: 18px;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 14px;
-  background: linear-gradient(135deg, rgba(159, 122, 234, 0.14), rgba(192, 132, 252, 0.18));
-  border: 1px solid rgba(159, 122, 234, 0.24);
-  box-shadow: var(--shadow-soft);
-  transition:
-    transform 0.35s var(--ease-smooth),
-    box-shadow 0.35s var(--ease-smooth),
-    background 0.35s ease;
+  background: rgba(159, 122, 234, 0.08); /* أخف */
+  border: 1px solid rgba(159, 122, 234, 0.18);
 }
 
+/* أهم تعديل هنا 👇 */
 .project-icon svg {
-  width: 28px;
-  height: 28px;
-  stroke: var(--primary);
-  stroke-width: 1.85;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+  width: 26px;
+  height: 26px;
+  stroke: #9f7aea;       /* لون أوضح */
+  stroke-width: 1.5;     /* أخف من قبل */
+  fill: none;
+  opacity: 0.9;
 }
-
 .project-panel:hover .project-icon {
   transform: translateY(-5px) scale(1.06);
   box-shadow: 0 18px 34px rgba(159, 122, 234, 0.22);
-  background: linear-gradient(135deg, rgba(159, 122, 234, 0.20), rgba(192, 132, 252, 0.26));
+  background: linear-gradient(135deg, rgba(159, 122, 234, 0.2), rgba(192, 132, 252, 0.26));
 }
 
 .project-link {
@@ -775,11 +783,25 @@ body.dark .course-pill {
   animation: heroLoadIn 0.9s var(--ease-smooth) forwards;
 }
 
-.delay-1 { animation-delay: 0.08s; }
-.delay-2 { animation-delay: 0.16s; }
-.delay-3 { animation-delay: 0.24s; }
-.delay-4 { animation-delay: 0.32s; }
-.delay-5 { animation-delay: 0.4s; }
+.delay-1 {
+  animation-delay: 0.08s;
+}
+
+.delay-2 {
+  animation-delay: 0.16s;
+}
+
+.delay-3 {
+  animation-delay: 0.24s;
+}
+
+.delay-4 {
+  animation-delay: 0.32s;
+}
+
+.delay-5 {
+  animation-delay: 0.4s;
+}
 
 @keyframes heroLoadIn {
   to {
@@ -788,12 +810,29 @@ body.dark .course-pill {
   }
 }
 
-.stagger-1 { transition-delay: 0.08s; }
-.stagger-2 { transition-delay: 0.16s; }
-.stagger-3 { transition-delay: 0.24s; }
-.stagger-4 { transition-delay: 0.32s; }
-.stagger-5 { transition-delay: 0.40s; }
-.stagger-6 { transition-delay: 0.48s; }
+.stagger-1 {
+  transition-delay: 0.08s;
+}
+
+.stagger-2 {
+  transition-delay: 0.16s;
+}
+
+.stagger-3 {
+  transition-delay: 0.24s;
+}
+
+.stagger-4 {
+  transition-delay: 0.32s;
+}
+
+.stagger-5 {
+  transition-delay: 0.4s;
+}
+
+.stagger-6 {
+  transition-delay: 0.48s;
+}
 
 .ai-chat {
   position: fixed;
@@ -1018,7 +1057,7 @@ body.dark .course-pill {
     grid-area: menu;
     display: none;
     width: 100%;
-    background: rgba(255,255,255,0.92);
+    background: rgba(255, 255, 255, 0.92);
     border: 1px solid var(--line);
     border-radius: 20px;
     padding: 16px;
@@ -1026,7 +1065,7 @@ body.dark .course-pill {
   }
 
   body.dark .nav-menu {
-    background: rgba(22,19,32,0.92);
+    background: rgba(22, 19, 32, 0.92);
   }
 
   .nav-menu.show {
