@@ -158,6 +158,7 @@ function blinkEyes() {
 }
 
 setTimeout(blinkEyes, 1500);
+
 /* ===== AI CHAT ===== */
 
 const aiChat = document.getElementById("aiChat");
